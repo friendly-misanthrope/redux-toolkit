@@ -1,10 +1,11 @@
 // import CSS and components here
+import Counter from './features/counter/Counter';
 
 const App = () => {
   return (
-    <div className='App'>
-      <h1>Hello World</h1>
-    </div>
+    <main className="App">
+      <Counter />
+    </main>
   );
 }
 
