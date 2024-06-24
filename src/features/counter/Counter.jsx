@@ -5,20 +5,12 @@ const Counter = () => {
   const count = useSelector((state) => state.counter.count);
   const dispatch = useDispatch();
 
-  const increment = () => {
-    dispatch(increment());
-  }
-
-  const decrement = () => {
-    dispatch(decrement());
-  }
-
   return (
     <section>
       <p>{count}</p>
       <div>
-        <button onClick={increment}>+</button>
-        <button onClick={decrement}>-</button>
+        <button onClick={() => dispatch(increment())}>+</button>
+        <button onClick={() => dispatch(decrement())}>-</button>
       </div>
     </section>
   );
